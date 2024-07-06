@@ -15,9 +15,9 @@ class SplashScreen extends StatelessWidget {
             Center(
               child: InkWell(
                 onTap: (){
-                  (FirebaseAuth.instance.currentUser !=null && FirebaseAuth.instance.currentUser!.emailVerified) ?Navigator.pushNamed(context, 'home'):Navigator.pushNamed(context, 'login');
-                  //Navigator.of(context).pushNamed('login');
-                },
+                  (FirebaseAuth.instance.currentUser !=null && FirebaseAuth.instance.currentUser!.emailVerified) ?Navigator.pushNamed(context, 'home')
+                  :Navigator.pushNamed(context, 'login');
+                 },
                 child: RippleAnimation(
                   size:const Size(200, 200),
                   repeat: true,
@@ -33,7 +33,6 @@ class SplashScreen extends StatelessWidget {
             ),
                  const SizedBox(height: 10,),
                  const Text('Chappie',style: TextStyle(fontSize: 40,color: Colors.blueGrey,fontFamily: 'Blackadder ITC',fontWeight: FontWeight.bold),),
-            
        ],
       )
  

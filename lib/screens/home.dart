@@ -22,16 +22,18 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 25),
-        child: Column(
-          children: [
-          const Padding(
-             padding:  EdgeInsets.only(left: 25,right: 25),
-             child: Text('Hello 😊, Choose what you want to learn today ?',style: TextStyle(color: Colors.blueGrey,fontSize: 25,fontWeight: FontWeight.bold),),
-           ),
-           item("Body Parts", 'assets/images/bodyParts.jpg',(){Navigator.pushNamed(context,'bodyParts');}),
-           item("Letters", 'assets/images/letters.jpg',(){Navigator.pushNamed(context,'letters');}),
-           item("Numbers", 'assets/images/numbers.jpg', () {Navigator.pushNamed(context,'numbers'); })
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+            const Padding(
+               padding:  EdgeInsets.only(left: 25,right: 25),
+               child: Text('Hello 😊, Choose what you want to learn today ?',style: TextStyle(color: Colors.blueGrey,fontSize: 20,),),
+             ),
+             item("Body Parts", 'assets/images/bodyParts.jpg',(){Navigator.pushNamed(context,'bodyParts');}),
+             item("Letters", 'assets/images/letters.jpg',(){Navigator.pushNamed(context,'letters');}),
+             item("Numbers", 'assets/images/numbers.jpg', () {Navigator.pushNamed(context,'numbers'); })
+            ],
+          ),
         ),
       ),
     );
@@ -64,7 +66,7 @@ item(String text ,String image,void Function()? onTap)
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(text,style:const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
+                          Text(text,style:const TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
                           CircleAvatar(
                             radius: 70,
                             backgroundImage: AssetImage(image),

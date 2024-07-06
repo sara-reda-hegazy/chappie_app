@@ -178,24 +178,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             },
                             
                            ),
-                           const SizedBox(height: 10,),
-                        //  const Text('----Or login with----',style: TextStyle(color: Colors.blueGrey,fontSize: 18),),
-                        //  GestureDetector(
-                        //   onTap: (){
-                        //     signInWithGoogle().then((value){
-                        //     Navigator.of(context).pushNamedAndRemoveUntil('home', (route) => false);
-
-                        //     }
-                        //     );
-                          
-                        //   },
-                        //    child: SizedBox(
-                        //     height: 50,
-                        //     width: 70,
-                        //     child: Image.asset('assets/images/google.png'),
-                        //    ),
-                        //  ),
-                                     const SizedBox(height: 10,),
+                       
+                        const SizedBox(height: 10,),
                          Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
